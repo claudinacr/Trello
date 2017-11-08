@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+}
+html{
+    background-color: #0868C0;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue Bold';
+    src: url('../assets/fonts/HelveticaNeueLTPro-Bd.otf');
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../assets/fonts/HelveticaNeueLTPro-Roman.otf');
+}
+p{
+    font-family: 'Helvetica Neue';
+}
+
+header {
+    width: 100%;
+}
+
+header nav {
+    padding: 0;
+    list-style: none;
+}
+
+.trello {
+    display: flex;
+    height: 46px;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 5px 10px 20px -20px rgba(85, 172, 238, 1);
+    color: #FFFFFF;
+    background-color: #085DA9;
+    
+}
+
+.trello li {
+    
+    cursor: pointer;
+}
+.trello li:hover {
+    color:#6B9ECC;
+}
+
+.trello li:first-child *{
+    display: inline;
+}
+
+.trello_logo{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.3em;
+    opacity: 0.3;
+}
+.trello_logo:hover{
+
+    opacity: 0.7;
+}
+
+.trello_logo img{
+  max-height: 30px;
+}
+
+.user{
+    max-width: 32px;
+    max-height: 32px;
+}
+
+#opciones li{
+    display: inline-block;
+    list-style: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#opciones li p{
+    display: inline-block;
+}
+
+input {
+    /* margin-left:1.5%; */
+    /* width: 20%; */
+    padding: 2%;
+    /*http://border-radius.com/*/
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgba(0, 0, 0, .12);
+    font-size: 14px;
+}
+
+
+/*http://www.bufa.es/cambiar-color-placeholder/*/
+
+::placeholder {
+    color: #EEEEEE;
+}
+
+.formulario {
+    width: 300px;
+    padding: 1%;
+    border-radius: 5px;
+    margin: 1em;
+    /* border:1px yellow solid; */
+}
+
+.boton {
+    max-width: 20%;
+    margin-left: 1.5%;
+    margin-top: 0.4%;
+    padding: 0.7%;
+    border-radius: 3px;
+    border: none;
+    background-color: #5AAC44;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 14px;
+}
