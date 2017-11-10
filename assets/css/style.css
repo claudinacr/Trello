@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
 }
-html{
+
+html {
     background-color: #0868C0;
 }
 
@@ -14,7 +15,8 @@ html{
     font-family: 'Helvetica Neue';
     src: url('../assets/fonts/HelveticaNeueLTPro-Roman.otf');
 }
-p{
+
+p {
     font-family: 'Helvetica Neue';
 }
 
@@ -35,48 +37,48 @@ header nav {
     box-shadow: 5px 10px 20px -20px rgba(85, 172, 238, 1);
     color: #FFFFFF;
     background-color: #085DA9;
-    
 }
 
 .trello li {
-    
     cursor: pointer;
 }
+
 .trello li:hover {
-    color:#6B9ECC;
+    color: #6B9ECC;
 }
 
-.trello li:first-child *{
+.trello li:first-child * {
     display: inline;
 }
 
-.trello_logo{
+.trello_logo {
     margin-left: auto;
     margin-right: auto;
     font-size: 1.3em;
     opacity: 0.3;
 }
-.trello_logo:hover{
 
+.trello_logo:hover {
     opacity: 0.7;
 }
 
-.trello_logo img{
-  max-height: 30px;
+.trello_logo img {
+    max-height: 30px;
 }
 
-.user{
+.user {
     max-width: 32px;
     max-height: 32px;
 }
 
-#opciones li{
+#opciones li {
     display: inline-block;
     list-style: none;
     color: #FFFFFF;
     cursor: pointer;
 }
-#opciones li p{
+
+#opciones li p {
     display: inline-block;
 }
 
@@ -119,4 +121,34 @@ input {
     color: #FFFFFF;
     font-weight: bold;
     font-size: 14px;
+}
+
+#row_container {
+    display: flex;
+    flex-direction: row;
+    border: 1px crimson solid;
+}
+
+.list_panel {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 5px;
+    margin: 1em;
+    background-color: #DEE0E2;
+}
+
+.boton_add {
+    max-width: 100%;
+    margin-top: auto;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    background-color: #DEE0E2;
+    min-height: 30px;
+    color: rgb(109, 109, 109);
+    padding: 0.5em;
+}
+
+.boton_add:hover {
+    background-color: rgb(189, 187, 187);
 }
