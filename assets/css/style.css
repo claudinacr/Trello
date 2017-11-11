@@ -8,16 +8,20 @@ html {
 
 @font-face {
     font-family: 'Helvetica Neue Bold';
-    src: url('../assets/fonts/HelveticaNeueLTPro-Bd.otf');
+    src: url('fonts/HelveticaNeueLTPro-Bd.otf');
 }
 
 @font-face {
     font-family: 'Helvetica Neue';
-    src: url('../assets/fonts/HelveticaNeueLTPro-Roman.otf');
+    src: url('fonts/HelveticaNeueLTPro-Roman.otf');
 }
 
 p {
     font-family: 'Helvetica Neue';
+}
+
+h4 {
+    font-family: 'Helvetica Neue Bold';
 }
 
 header {
@@ -93,6 +97,7 @@ input {
     border: none;
     background-color: rgba(0, 0, 0, .12);
     font-size: 14px;
+    font-family: 'Helvetica Neue';
 }
 
 
@@ -104,23 +109,24 @@ input {
 
 .formulario {
     width: 300px;
-    padding: 1%;
+    padding: 1em;
     border-radius: 5px;
     margin: 1em;
     /* border:1px yellow solid; */
 }
 
-.boton {
-    max-width: 20%;
-    margin-left: 1.5%;
-    margin-top: 0.4%;
-    padding: 0.7%;
+.botonlista {
+    max-width: 6em;
+    margin-left: 1em;
+    margin-top: 0.5em;
+    padding: 0.3em;
     border-radius: 3px;
     border: none;
     background-color: #5AAC44;
     color: #FFFFFF;
     font-weight: bold;
     font-size: 14px;
+    text-align: center;
 }
 
 #row_container {
@@ -138,17 +144,42 @@ input {
     background-color: #DEE0E2;
 }
 
-.boton_add {
+.list_panel>h4 {
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.controller_panel {
+    margin-left: 1em;
+}
+
+.boton_panel {
+    max-width: 6em;
+    margin-left: 1em;
+    margin-top: 0.5em;
+    padding: 0.2em;
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+    background-color: #5AAC44;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.boton_add_tarea {
     max-width: 100%;
     margin-top: auto;
     border-radius: 0 0 5px 5px;
     cursor: pointer;
     background-color: #DEE0E2;
-    min-height: 30px;
+    min-height: 2em;
     color: rgb(109, 109, 109);
     padding: 0.5em;
+    font-family: 'Helvetica Neue';
 }
 
-.boton_add:hover {
+.boton_add_tarea:hover {
     background-color: rgb(189, 187, 187);
+    border-radius: 0 0 5px 5px;
 }
