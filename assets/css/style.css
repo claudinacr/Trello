@@ -132,7 +132,7 @@ input {
 #row_container {
     display: flex;
     flex-direction: row;
-    border: 1px crimson solid;
+    /* border: 1px crimson solid; */
 }
 
 .list_panel {

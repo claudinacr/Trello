@@ -73,7 +73,7 @@ var controller_panel = document.createElement('form');
 controller_panel.className = 'controller_panel';
 controller_panel.setAttribute('display', 'block');
 
-var input2 = document.createElement('input');
+var input2 = document.createElement('textarea');
 input2.className = 'textoEntrada_tarea';
 input2.setAttribute("type", "text");
 
@@ -84,7 +84,7 @@ ControlDiv2.className = 'controles_lista';
 var boton2 = document.createElement('button');
 boton2.className = 'boton_panel';
 boton2.setAttribute('type', 'button');
-boton2.appendChild(document.createTextNode('Guardar'));
+boton2.appendChild(document.createTextNode('Añadir'));
 
 
 var icono2 = document.createElement('i');
@@ -98,10 +98,9 @@ icono2.style.color = '#EEEEEE';
 ControlDiv2.appendChild(boton2);
 ControlDiv2.appendChild(icono2);
 
-ControlDiv2.style.display = 'none';
-
 controller_panel.appendChild(input2);
 controller_panel.appendChild(ControlDiv2);
+controller_panel.style.display = "none";
 
 var list_panel = document.createElement("div");
 list_panel.className = "list_panel";
@@ -109,6 +108,7 @@ list_panel.appendChild(document.createElement("h4"));
 var boton_add_tarea = document.createElement("div");
 boton_add_tarea.className = "boton_add_tarea";
 boton_add_tarea.appendChild(document.createTextNode("Añadir una Tarea..."));
+list_panel.appendChild(controller_panel);
 list_panel.appendChild(boton_add_tarea);
 
 
@@ -144,5 +144,25 @@ document.addEventListener('click', function(evento) {
 
         }
 
+    } else if (objetivo.className.match("boton_add_tarea")) {
+        var panel = objetivo.parentNode.querySelector(".controller_panel");
+        if (panel) {
+            panel.style.display = "block";
+        } else {
+
+        }
+
+
+    } else if (objetivo.className.match("equistarea")) {
+
+        objetivo.parentNode.parentNode.style.display = "none";
+    } else if (objetivo.className.match("boton_panel")) {
+        var texto_tarea = objetivo.parentNode.parentNode.firstElementChild.value;
+        console.log(texto_tarea);
+        if (texto_tarea > 0) {
+
+        } else {
+
+        }
     }
 });
