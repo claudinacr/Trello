@@ -178,8 +178,8 @@ document.addEventListener('click', function(evento) {
     } else if (objetivo.className.match("equis_tarea")) {
         var panel2 = objetivo.parentNode.parentNode;
         panel2.style.display = "none";
-
         panel2.nextSibling.style.display = "block";
+        panel2.firstElementChild.value = "";
 
     }
 });
