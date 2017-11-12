@@ -6,43 +6,45 @@ section.className = 'sectionFormulario';
 /*Maquetado del Formulario*/
 
 /*Creación del formulario. Elemento Form*/
+/*Formulario para añadir Listas*/
 
-var formulario = document.createElement('form');
+var form_lista_nueva = document.createElement('form');
 
 /*Agregando clase al formulario*/
 
-formulario.className = 'formulario';
-formulario.setAttribute('display', 'block');
+form_lista_nueva.className = 'form_lista_nueva';
+form_lista_nueva.setAttribute('display', 'block');
 
-var input = document.createElement('input');
-input.className = 'textoEntrada';
-input.setAttribute('placeholder', 'Añadir una lista...');
+/*Elemento Input para el formulario*/
+
+var input_lista = document.createElement('input');
+input_lista.className = 'input_lista';
+input_lista.setAttribute('placeholder', 'Añadir una lista...');
+
+var controles_lista = document.createElement('div');
+controles_lista.className = 'controles_lista';
+
+var boton_lista = document.createElement('button');
+boton_lista.className = 'boton_lista';
+boton_lista.setAttribute('type', 'button');
+boton_lista.appendChild(document.createTextNode('Guardar'));
 
 
-var ControlDiv = document.createElement('div');
-ControlDiv.className = 'controles';
+var equis_lista = document.createElement('i');
+equis_lista.className = 'fa fa-times equis_lista';
+equis_lista.setAttribute('aria-hidden', 'true');
+equis_lista.style.marginLeft = '20px';
+equis_lista.style.marginTop = '10px';
+equis_lista.style.fontSize = '25px';
+equis_lista.style.color = '#EEEEEE';
 
-var boton = document.createElement('button');
-boton.className = 'botonlista';
-boton.setAttribute('type', 'button');
-boton.appendChild(document.createTextNode('Guardar'));
+controles_lista.appendChild(boton_lista);
+controles_lista.appendChild(equis_lista);
 
+controles_lista.style.display = 'none';
 
-var icono = document.createElement('i');
-icono.className = 'fa fa-times equislista';
-icono.setAttribute('aria-hidden', 'true');
-icono.style.marginLeft = '20px';
-icono.style.marginTop = '10px';
-icono.style.fontSize = '25px';
-icono.style.color = '#EEEEEE';
-
-ControlDiv.appendChild(boton);
-ControlDiv.appendChild(icono);
-
-ControlDiv.style.display = 'none';
-
-formulario.appendChild(input);
-formulario.appendChild(ControlDiv);
+form_lista_nueva.appendChild(input_lista);
+form_lista_nueva.appendChild(controles_lista);
 
 //Panel de lista vacio
 var list_panel = document.createElement("div");
@@ -53,54 +55,51 @@ var boton_add = document.createElement('div');
 boton_add.className = 'boton_add';
 boton_add.appendChild(document.createTextNode('Añadir Lista...'));
 
+
+
 // Formulario Lista
 
 
 
 var row_container = document.getElementById('row_container');
 
-row_container.appendChild(formulario);
+row_container.appendChild(form_lista_nueva);
 
-/* for (var i = 0; i < 6; i++) {
-    Copiaelemento = formulario.cloneNode('true');
-    body.insertBefore(Copiaelemento, body.lastElementChild);
-    
-} */
 
 
 // Formulario Tarea
-var controller_panel = document.createElement('form');
-controller_panel.className = 'controller_panel';
-controller_panel.setAttribute('display', 'block');
+var form_tarea_nueva = document.createElement('form');
+form_tarea_nueva.className = 'form_tarea_nueva';
+form_tarea_nueva.setAttribute('display', 'block');
 
-var input2 = document.createElement('textarea');
-input2.className = 'textoEntrada_tarea';
-input2.setAttribute("type", "text");
-
-
-var ControlDiv2 = document.createElement('div');
-ControlDiv2.className = 'controles_lista';
-
-var boton2 = document.createElement('button');
-boton2.className = 'boton_panel';
-boton2.setAttribute('type', 'button');
-boton2.appendChild(document.createTextNode('Añadir'));
+var input_tarea = document.createElement('textarea');
+input_tarea.className = 'input_tarea';
+input_tarea.setAttribute("type", "text");
 
 
-var icono2 = document.createElement('i');
-icono2.className = 'fa fa-times equistarea';
-icono2.setAttribute('aria-hidden', 'true');
-icono2.style.marginLeft = '20px';
-icono2.style.marginTop = '10px';
-icono2.style.fontSize = '25px';
-icono2.style.color = '#EEEEEE';
+var controles_tarea = document.createElement('div');
+controles_tarea.className = 'controles_tarea';
 
-ControlDiv2.appendChild(boton2);
-ControlDiv2.appendChild(icono2);
+var boton_tarea = document.createElement('button');
+boton_tarea.className = 'boton_tarea';
+boton_tarea.setAttribute('type', 'button');
+boton_tarea.appendChild(document.createTextNode('Añadir'));
 
-controller_panel.appendChild(input2);
-controller_panel.appendChild(ControlDiv2);
-controller_panel.style.display = "none";
+
+var equis_tarea = document.createElement('i');
+equis_tarea.className = 'fa fa-times equis_tarea';
+equis_tarea.setAttribute('aria-hidden', 'true');
+equis_tarea.style.marginLeft = '20px';
+equis_tarea.style.marginTop = '10px';
+equis_tarea.style.fontSize = '25px';
+equis_tarea.style.color = '#EEEEEE';
+
+controles_tarea.appendChild(boton_tarea);
+controles_tarea.appendChild(equis_tarea);
+
+form_tarea_nueva.appendChild(input_tarea);
+form_tarea_nueva.appendChild(controles_tarea);
+form_tarea_nueva.style.display = "none";
 
 var list_panel = document.createElement("div");
 list_panel.className = "list_panel";
@@ -108,28 +107,38 @@ list_panel.appendChild(document.createElement("h4"));
 var boton_add_tarea = document.createElement("div");
 boton_add_tarea.className = "boton_add_tarea";
 boton_add_tarea.appendChild(document.createTextNode("Añadir una Tarea..."));
-list_panel.appendChild(controller_panel);
+list_panel.appendChild(form_tarea_nueva);
 list_panel.appendChild(boton_add_tarea);
+
+var tarea = document.createElement("div");
+tarea.className = "tarea";
+tarea.appendChild(document.createElement("h5"));
+
 
 
 document.addEventListener('click', function(evento) {
     var objetivo = evento.target;
     //objetcivo es una referencia al objeto que está recibiendo el evento
 
-    if (objetivo.className.match("textoEntrada")) {
+    //Si el objetivo del evento que sucede coincide con la clase del Input para Lista
+    if (objetivo.className.match("input_lista")) {
+        /*Aquí accedemos de manera Relativa  a los componentes
+        a partir del objeto que es target del evento 
+        y así poder  mostrar y/o ocultar lo que se requiera*/
         objetivo.parentNode.lastElementChild.style.display = 'block';
         objetivo.parentNode.style.backgroundColor = '#DEE0E2';
         objetivo.setAttribute('placeholder', '');
 
-    } else if (objetivo.className.match("equislista")) {
+    } else if (objetivo.className.match("equis_lista")) {
         objetivo.parentNode.style.display = 'none';
         objetivo.parentNode.parentNode.style.backgroundColor = 'transparent';
         objetivo.parentNode.parentNode.firstElementChild.value = "";
         objetivo.parentNode.parentNode.firstElementChild.setAttribute('placeholder', 'Añadir una lista...');
-    } else if (objetivo.className.match("botonlista")) {
+
+    } else if (objetivo.className.match("boton_lista")) {
 
         var titulo = objetivo.parentNode.parentNode.firstElementChild.value;
-        console.log(titulo);
+        //console.log(titulo);
         if (titulo.length > 0) {
             objetivo.parentNode.style.display = 'none';
             objetivo.parentNode.parentNode.style.backgroundColor = 'transparent';
@@ -145,24 +154,32 @@ document.addEventListener('click', function(evento) {
         }
 
     } else if (objetivo.className.match("boton_add_tarea")) {
-        var panel = objetivo.parentNode.querySelector(".controller_panel");
-        if (panel) {
-            panel.style.display = "block";
-        } else {
+        var panel = objetivo.parentNode.querySelector(".form_tarea_nueva");
+        panel.style.display = "block";
+        objetivo.style.display = "none";
+        panel.firstElementChild.focus();
 
-        }
-
-
-    } else if (objetivo.className.match("equistarea")) {
-
-        objetivo.parentNode.parentNode.style.display = "none";
-    } else if (objetivo.className.match("boton_panel")) {
+    } else if (objetivo.className.match("boton_tarea")) {
         var texto_tarea = objetivo.parentNode.parentNode.firstElementChild.value;
+        var form_tarea = objetivo.parentNode.parentNode;
+        var panel_padre = objetivo.parentNode.parentNode.parentNode;
         console.log(texto_tarea);
-        if (texto_tarea > 0) {
+        if (texto_tarea.length > 0) {
+            var nueva_tarea = tarea.cloneNode(true);
+            nueva_tarea.firstElementChild.innerText = texto_tarea;
+            objetivo.parentNode.parentNode.firstElementChild.value = "";
+            panel_padre.insertBefore(nueva_tarea, form_tarea);
+            form_tarea.nextSibling.style.display = "block";
+            form_tarea.style.display = "none";
 
         } else {
 
         }
+    } else if (objetivo.className.match("equis_tarea")) {
+        var panel2 = objetivo.parentNode.parentNode;
+        panel2.style.display = "none";
+
+        panel2.nextSibling.style.display = "block";
+
     }
 });

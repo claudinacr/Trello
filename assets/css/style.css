@@ -20,7 +20,8 @@ p {
     font-family: 'Helvetica Neue';
 }
 
-h4 {
+h4,
+h5 {
     font-family: 'Helvetica Neue Bold';
 }
 
@@ -43,8 +44,9 @@ header nav {
     background-color: #085DA9;
 }
 
-.trello li {
+.trello li:not(.trello_logo) {
     cursor: pointer;
+    margin-right: 2em;
 }
 
 .trello li:hover {
@@ -53,6 +55,10 @@ header nav {
 
 .trello li:first-child * {
     display: inline;
+}
+
+.navinput * {
+    display: inline-block;
 }
 
 .trello_logo {
@@ -107,15 +113,16 @@ input {
     color: #EEEEEE;
 }
 
-.formulario {
+.form_lista_nueva {
     width: 300px;
     padding: 1em;
     border-radius: 5px;
     margin: 1em;
+    align-self: flex-start;
     /* border:1px yellow solid; */
 }
 
-.botonlista {
+.boton_lista {
     max-width: 6em;
     margin-left: 1em;
     margin-top: 0.5em;
@@ -132,12 +139,14 @@ input {
 #row_container {
     display: flex;
     flex-direction: row;
+    max-width: 100%;
     /* border: 1px crimson solid; */
 }
 
 .list_panel {
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
     width: 300px;
     border-radius: 5px;
     margin: 1em;
@@ -147,24 +156,6 @@ input {
 .list_panel>h4 {
     margin-left: 1em;
     margin-top: 1em;
-}
-
-.controller_panel {
-    margin-left: 1em;
-}
-
-.boton_panel {
-    max-width: 6em;
-    margin-left: 1em;
-    margin-top: 0.5em;
-    padding: 0.2em;
-    text-align: center;
-    border-radius: 3px;
-    border: none;
-    background-color: #5AAC44;
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 14px;
 }
 
 .boton_add_tarea {
@@ -182,4 +173,34 @@ input {
 .boton_add_tarea:hover {
     background-color: rgb(189, 187, 187);
     border-radius: 0 0 5px 5px;
+}
+
+.form_tarea_nueva {
+    margin: 1em;
+}
+
+.input_tarea {
+    max-width: 100%;
+    width: 20em;
+}
+
+.boton_tarea {
+    max-width: 7em;
+    margin-left: 1em;
+    margin-top: 0.5em;
+    padding: 0.2em;
+    text-align: center;
+    border-radius: 3px;
+    border: none;
+    background-color: #5AAC44;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tarea {
+    margin: 0.3em;
+    border-radius: 3px;
+    background-color: rgb(189, 187, 187);
+    padding: 0.2em;
 }
