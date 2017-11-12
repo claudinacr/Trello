@@ -42,19 +42,42 @@ header nav {
     box-shadow: 5px 10px 20px -20px rgba(85, 172, 238, 1);
     color: #FFFFFF;
     background-color: #085DA9;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .trello li:not(.trello_logo) {
     cursor: pointer;
     margin-right: 2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #468EC1;
+    opacity: 1;
+    border-radius: 5px;
 }
 
-.trello li:hover {
-    color: #6B9ECC;
+
+
+.trello li:last-child {
+    cursor: pointer;
+    margin-right: 2em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: transparent;
+}
+.trello li:hover:not(:last-Child) {
+    color: #5F9ECA;
+    opacity: 0.3;
+
 }
 
 .trello li:first-child * {
     display: inline;
+    margin-right: 8px;
 }
 
 .navinput * {
@@ -74,6 +97,16 @@ header nav {
 
 .trello_logo img {
     max-height: 30px;
+}
+
+trello_logo i:first-child {
+    font-size: 20px;
+}
+
+.fa-trello{
+    position: relative;
+    top:3px;
+    font-size: 25px;
 }
 
 .user {
